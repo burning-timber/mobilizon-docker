@@ -55,7 +55,7 @@ LABEL org.opencontainers.image.title="mobilizon" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 
-RUN apt-get update && apt-get install -y openssl ncurses-libs file postgresql-client \
+RUN apt-get update && apt-get install -y openssl libncursesw5 libncurses5 file postgresql-client \
     && rm -rf /root/.cache \
     && rm -rf /var/lib/apt/lists/*
 
