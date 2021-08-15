@@ -3,7 +3,7 @@ FROM node:16-buster as assets
 
 ENV DEBIAN_FRONTEND="noninteractive" TZ="America/New_York"
 
-RUN apt-get update && apt-get install -y python3 build-base libwebp-tools bash imagemagick ncurses \
+RUN apt-get update && apt-get install -y python3 build-essential webp bash imagemagick libncurses \
     && rm -rf /root/.cache \
     && rm -rf /var/lib/apt/lists/*
 
