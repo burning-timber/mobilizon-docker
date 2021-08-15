@@ -59,8 +59,8 @@ RUN apt-get update && apt-get install -y openssl libncursesw5 libncurses5 file p
     && rm -rf /root/.cache \
     && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir -p /app/uploads && chown nobody:nobody /app/uploads
-RUN mkdir -p /etc/mobilizon && chown nobody:nobody /etc/mobilizon
+RUN mkdir -p /app/uploads && chown nobody:nogroup /app/uploads
+RUN mkdir -p /etc/mobilizon && chown nobody:nogroup /etc/mobilizon
 
 USER nobody
 EXPOSE 4000
