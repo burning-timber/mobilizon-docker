@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND="noninteractive" TZ="America/New_York"
 RUN apt-get update && apt-get install -y python3 build-essential webp bash imagemagick libncurses5-dev libncursesw5-dev \
     && rm -rf /root/.cache \
     && rm -rf /var/lib/apt/lists/*
-
+WORKDIR /build
 COPY js .
 RUN yarn install \
     && yarn run build
