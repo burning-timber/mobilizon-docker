@@ -67,7 +67,7 @@ EXPOSE 4000
 
 ENV MOBILIZON_DOCKER=true
 
-COPY --from=builder --chown=nobody:nobody _build/prod/rel/mobilizon ./
+COPY --from=builder --chown=nobody:nogroup _build/prod/rel/mobilizon ./
 RUN cp /releases/*/runtime.exs /etc/mobilizon/config.exs
 COPY docker/production/docker-entrypoint.sh ./
 
